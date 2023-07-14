@@ -71,6 +71,10 @@
 			var positionX = 0;
 			var points = 0;
 			var speed = 10;
+			var randNum = (Math.random() * boardWidth);
+			var positionY;
+			var speedY;
+			var boardHeight = jQuery(window).height();
 
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -103,6 +107,12 @@
 				changeBoxText(points);
 				points = points + 1;
 				speed = speed + 3;
+				if (speed > 0) {
+					speed = speed + 3
+				}
+				if (speed < 0) {
+					speed = speed - 3
+				}
 
 
 			};
